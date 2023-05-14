@@ -1,0 +1,197 @@
+.finding-room {
+  &__wrapper {
+    display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // grid-auto-rows: minmax(100px, auto);
+    height: 38vw;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 2fr 7fr;
+    grid-template-areas:
+        "buttons slider"
+        "map slider"
+  }
+
+  &__buttons {
+    grid-area: buttons;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+
+
+    &-text {
+      font-size: 24px;
+      text-transform: uppercase;
+      position: relative;
+      width: 100%;
+
+      svg {
+        transition: top 0.3s;
+        position: absolute;
+        right: 20px;
+        width: 45px;
+      }
+
+      p {
+        max-width: 130px;
+        margin: 0;
+        padding: 30px;
+      }
+    }
+
+    &-container {
+      display: grid;
+    }
+  }
+  &__map {
+    grid-area: map;
+    .vue-map-container {
+      height: 100%!important;
+    }
+  }
+
+  &__slider {
+    grid-area: slider;
+    width: 100%;
+
+    &-buttons {
+      right: 30px;
+      position: absolute;
+      bottom: 30px;
+      z-index: 1;
+      display: flex;
+    }
+
+    &-pagination {
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      height: fit-content;
+      z-index: 1;
+      left: 40px !important;
+
+      .swiper-pagination-bullet {
+        height: 6px;
+        background-color: $white;
+        opacity: 0.5;
+        width: 50px;
+        border-radius: 0;
+        transition: opacity 0.3s, width 0.3s;
+        margin-right: 10px;
+
+        &-active {
+          opacity: 1;
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  .slider-button {
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      border-color: $darkBlue;
+      background-color: $white;
+      path {
+        fill: $darkBlue;
+      }
+    }
+
+    border-color: $white;
+    svg{
+      position: relative;
+      transition: .3s ease-in-out;
+    }
+
+    // &:first-child:hover {
+    //     svg {
+    // transform: translateX(-10px);
+    //     }
+    // }
+
+    // &:last-child:hover {
+    //     svg {
+    //         transform: rotate(180deg) translateX(-10px);
+    //     }
+    // }
+
+    svg {
+      transition: transform 0.3s;
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  &__slide {
+    &-image {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__button {
+    border: none;
+    border-bottom: 1px solid $white;
+    background-color: #272842;
+    font-size: 20px;
+    color: #C4C4C4;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    position: relative;
+    font-family: 'Roboto';
+
+    &:last-child {
+      border: 0;
+    }
+
+    &-VIB {
+      font-size: 1.5vw;
+      width: 60px;
+      text-align: left;
+    }
+
+    &-name {
+      max-width: 100px;
+      display: block;
+      margin-left: 20px;
+      text-align: left;
+    }
+
+    &-arrow {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 20px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &--selected {
+      color: #FFFFFF;
+      background-color: #000126;
+    }
+  }
+}
+
+//.finding-room__slider-buttons {
+//  .slider-button svg{
+//    transition: .3s ease-in-out;
+//  }
+//  .slider-button:first-child:hover{
+//    svg{
+//      right: 10px;
+//    }
+//  }
+//  .slider-button:last-child:hover{
+//    svg{
+//      left: 10px;
+//    }
+//  }
+//}

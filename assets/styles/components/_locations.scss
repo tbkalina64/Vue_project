@@ -1,0 +1,296 @@
+@import '../libs/variables.scss';
+
+.locations {
+  .main_banner__arrow {
+    width: 2.344vw;
+    height: 2.344vw;
+
+    svg {
+      left: auto;
+      right: 35px;
+    }
+  }
+
+  .finding-room__wrapper {
+    display: grid;
+    height: 38vw;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: 17fr 7fr;
+    grid-template-areas:
+      "map slider"
+      "info slider";
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .swiper-wrapper {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+.locations-info {
+  grid-area: info;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "loc-place loc-address";
+
+  &__place {
+    background-color: $darkBlue;
+    position: relative;
+    padding: 2.08vw;
+    grid-area: loc-place;
+
+    span {
+      display: inline-block;
+      width: 165px;
+      font-size: 1.5vw;
+      line-height: 36px;
+      text-transform: uppercase;
+      color: $white;
+    }
+
+    svg {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+    }
+  }
+
+  &__adress {
+    grid-area: loc-address;
+  }
+}
+
+.locations-address {
+  padding: 1.5vw;
+
+  &__title {
+    font-size: 1vw;
+    line-height: 39px;
+    letter-spacing: 0.035em;
+    color: $gray;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    font-size: 1.25vw;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $black;
+    max-width: 230px;
+    display: inline-block;
+  }
+}
+
+.locations-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3vw;
+}
+
+.locations__title {
+  margin: 0;
+  max-width: 1100px;
+  font-size: 4vw;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.locations__subtitle {
+  font-size: 1.25vw;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $black;
+  max-width: 280px;
+  margin-top: 35px;
+
+  span {
+    font-weight: 500;
+  }
+}
+
+.locations-join {
+  background-color: $pink;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  a {
+    background-color: $darkBlue;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    padding: 1.5vw;
+    height: 7.917vw;
+
+    span {
+      font-size: 1.5VW;
+      line-height: 1.875VW;
+      text-transform: uppercase;
+      color: $white;
+
+    }
+
+    svg {
+      position: absolute;
+      right: 35px;
+      bottom: 35px;
+    }
+  }
+}
+
+.locations__bottom {
+  margin-top: 6.250vw;
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr 14vw;
+  grid-template-areas:
+    "loc-image loc-description loc-join";
+}
+
+.img-fluid {
+  min-width: 100%;
+  height: auto;
+}
+
+.locations-descriptions {
+  margin-left: 2vw;
+}
+
+.locations__description {
+  font-size: 1.3vw;
+  line-height: 2vw;
+  letter-spacing: 0.035em;
+  color: $black;
+  margin-bottom: 25px;
+}
+
+.hover-link {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  svg {
+    fill: $white;
+  }
+
+  &:hover {
+    background-color: $turquoise;
+
+    span {
+      color: $darkBlue;
+    }
+
+    svg {
+      path {
+        fill: $darkBlue;
+      }
+    }
+  }
+}
+
+
+// Location Brattleboro
+
+
+.brattleboro {
+  .finding-room__wrapper {
+    grid-template-areas:
+      "slider map"
+      "slider info";
+    grid-template-columns: 4fr 3fr;
+
+  }
+
+  .locations__subtitle {
+    margin-top: 10px;
+  }
+
+  .locations-info {
+    grid-area: info;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "loc-address loc-place";
+  }
+
+  .locations__bottom {
+    grid-template-areas:
+      "loc-join loc-description loc-image";
+    grid-template-columns: 14vw 1fr 1fr;
+  }
+
+  .locations-join {
+    background-color: $green;
+
+    svg {
+      // transform: rotate(0deg);
+    }
+  }
+}
+
+.locations__image {
+  grid-area: loc-image;
+}
+
+.locations-descriptions {
+  grid-area: loc-description;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.locations-join {
+  grid-area: loc-join;
+}
+
+.bennington {
+  .locations-info {
+    grid-area: info;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "loc-address loc-place";
+  }
+
+  .finding-room__wrapper {
+    grid-template-areas:
+      "slider map"
+      "slider info";
+    grid-template-columns: 4fr 3fr;
+  }
+
+  .locations__bottom {
+    grid-gap: 0;
+    grid-template-areas:
+      "loc-description loc-join loc-image";
+    grid-template-columns: 1fr 14vw 1fr;
+
+    .locations-descriptions {
+      margin-left: 0;
+      margin-right: 5vw;
+    }
+  }
+}
+
+.finding-room:nth-child(3) .locations-join {
+  background-color: $turquoise;
+}
+.around-the-clock{
+  font-size: 1.8vw;
+    line-height: 2vw;
+    text-transform: uppercase;
+    color: #000000;
+}

@@ -1,0 +1,39 @@
+@import './variables.scss';
+
+.justify_c-sb {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text_a-r {
+    text-align: right;
+}
+
+.text_a-c {
+    text-align: center;
+}
+button{
+  cursor: pointer;
+}
+
+.section {
+    margin-bottom: 8.5vw;
+}
+
+.section_line {
+    background-color: $darkBlue;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 5vw;
+
+    &__number {
+        font-size: 24px;
+        color: $darkBlue;
+        padding-top: 10px;
+        margin: 0;
+    }
+}
+
+button{
+  outline: none;
+}

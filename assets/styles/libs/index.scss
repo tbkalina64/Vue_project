@@ -1,0 +1,45 @@
+@import "swiper/swiper-bundle.css";
+@import "ant-design-vue/lib/select/style/index.css";
+@import "ant-design-vue/lib/date-picker/style/index.css";
+@import "ant-design-vue/lib/checkbox/style/index.css";
+@import "ant-design-vue/lib/notification/style/index.css";
+
+@import './bootstrap.scss';
+@import './animation.scss';
+@import './variables.scss';
+@import 'utils';
+
+.slider {
+    &-button {
+        margin-top: 30px;
+        border: 1px solid $darkBlue;
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+            margin-left: 15px;
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        transition: background-color 0.3s;
+
+        &:hover {
+            border-color: $darkBlue;
+            background-color: $darkBlue;
+
+            svg path {
+                fill: $white;
+            }
+        }
+    }
+}
+.main_banner .text_a-r svg,
+.features-page__subtitle svg,
+.place-arrows-wrapper svg,
+.contacts-map section .text_a-r svg{
+    cursor: pointer;
+  }

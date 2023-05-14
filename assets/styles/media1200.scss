@@ -1,0 +1,666 @@
+@media (min-width: 1200px) {
+  .logo__title pre {
+    line-height: 3.8vw;
+  }
+
+  .logo-big .logo__title pre {
+    font-size: 4vw;
+  }
+
+  .logo-medium {
+    width: 20vw;
+  }
+
+  .section_line__number {
+    font-size: 18px;
+  }
+
+  .footer__button .button.white {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .arrow-icon svg {
+    width: 34px;
+    height: 35px;
+  }
+
+  .types_room__text {
+    font-size: 1.3vw;
+  }
+
+  .types_room__type_description {
+    height: 3.5vw;
+    font-size: 1.5vw;
+  }
+
+  .section_line__text {
+    font-size: 1.3vw;
+  }
+
+  .types_room__image {
+    height: 30vw;
+  }
+
+  .types_room__title {
+    overflow: inherit;
+  }
+
+  .types_room__title h2 {
+    font-weight: 500;
+    font-size: 4vw;
+  }
+
+  .types_room__join {
+    padding: 20px;
+    width: 9vw;
+    height: 7vw;
+
+  }
+
+  .types_room__join span {
+    font-size: 1.5vw;
+  }
+
+  .types_room__type {
+    height: 12vw;
+  }
+
+  .types_room__type_name {
+    font-size: 1.5vw;
+  }
+
+  .types_room__type_description {
+    margin: 1.25vw 0 3vw;
+  }
+
+  .types_room__type_price {
+    font-size: 1.5vw;
+  }
+
+  .main_banner__photo {
+    height: 39vw;
+  }
+
+  .main_banner__text {
+    height: 13vw;
+  }
+
+  .main_banner__title {
+    font-size: 1.8vw;
+    line-height: 2.5vw;
+    padding: 0.96vw 2vw 0;
+
+  }
+
+  .main_banner .logo svg {
+    width: 16vw;
+  }
+
+  .main_banner__sub_title {
+    line-height: 2.5vw;
+    padding: 0.96vw 2vw 0;
+    font-size: 1.5vw;
+
+  }
+
+  .banner__arrow {
+    width: 4vw;
+    height: auto;
+  }
+
+  .features-page__link {
+    width: calc(100% - 60px);
+  }
+
+  .features__title {
+    font-size: 4vw;
+  }
+
+  .header-buttons .button {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .header__link {
+    font-size: 16px;
+  }
+
+  .project-item-wrapper {
+    height: calc(170px - 28px * 2);
+  }
+
+  .features__slide-text {
+    height: 10vw;
+  }
+
+  .features__title {
+    font-size: 4vw;
+  }
+
+  .features__description {
+    font-size: 1.3vw;
+    margin: 4.688vw 0 0 8vw;
+line-height: 2vw;
+  }
+
+  .features__block {
+    font-size: 1.5vw;
+    padding: 20px;
+    width: 11.458vw;
+    height: 8.333vw;
+
+  }
+
+  .features__slide {
+    height: 31.25vw;
+  }
+
+  .features__slide-name {
+    font-size: 1.5vw;
+  }
+
+  .features__slide-description {
+    margin: 0;
+  }
+
+  .features-arrows {
+    display: flex;
+  }
+
+  .features__slide-progress {
+    margin-bottom: 10px;
+  }
+
+  .finding-room__buttons-text svg {
+    width: 45px;
+  }
+
+  .finding-room__slider-buttons {
+    display: flex;
+  }
+
+  .finding-room__button-VIB {
+    font-size: 1.5vw;
+  }
+
+  .types_room__type_name--hiden {
+    font-size: 1.1em;
+  }
+
+  .slider-button {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .contact-us__form-button {
+    padding: 1.5vw;
+  }
+
+  .contact-us__form-button span {
+    font-size: 1.5vw;
+  }
+
+  .contacts-page__text {
+    margin-bottom: 3vw;
+  }
+
+  .contacts-page__title {
+    font-size: 4vw;
+  }
+
+  .contacts-page__button {
+    padding: 2vw;
+    font-size: 1.2vw;
+  }
+
+  .button__working-hours {
+    font-size: 1.2vw;
+  }
+
+  .button__working-hours__value {
+    margin-left: 11px;
+  }
+
+  .features__slide-name {
+    margin-bottom: 1vw;
+  }
+
+  .features-page__title {
+    font-size: 4vw;
+  }
+
+  .features-page__link {
+    padding: 1.5vw;
+    font-size: 1.5vw;
+  }
+
+  .feature__image {
+    height: 34vw;
+  }
+
+  .feature__block {
+    width: 11vw;
+  }
+
+  .feature__block--link {
+    padding: 20px;
+    width: calc(100% - 40px);
+
+  }
+
+  .feature__block--link span {
+    font-size: 1.5vw;
+  }
+
+  .feature__title {
+    font-size: 2.2vw;
+  }
+
+  .feature__texts {
+    margin-left: 5vw;
+    font-size: 1.3vw;
+    max-width: 630px;
+  }
+
+  .feature--right .feature__block {
+    width: 80%;
+    height: 10vw;
+
+  }
+
+  .feature--right .feature__block--color {
+    width: 60%;
+    height: 10vw;
+
+  }
+
+  .feature--right .feature__block--link {
+    height: calc(100% - 40px);
+  }
+
+  .locations .finding-room__wrapper {
+    height: 38vw;
+  }
+
+  .locations-info__place span {
+    font-size: 1.5vw;
+  }
+
+  .locations-address {
+    padding: 1.5vw;
+  }
+
+  .locations-address__title {
+    font-size: 1vw;
+    margin: 0;
+  }
+ .event-page .locations__subtitle{
+    font-size: 1.250vw;
+    line-height: 1.979vw;
+    margin-top: 10px;
+   max-width: 100%;
+    text-align: right;
+    font-weight: 500;
+  }
+
+  .event-social a{
+    width: 2.604vw;
+    height: 2.604vw;
+    img{
+      width: 1.302vw;
+    }
+  }
+
+  .locations-title-wrapper {
+    margin-bottom: 3vw;
+  }
+  .event-page .locations-title-wrapper {
+    margin-bottom: 0.3vw;
+  }
+
+  .locations__title {
+    font-size: 4vw;
+  }
+
+  .locations-join a {
+    padding: 1.5vw;
+  }
+
+  .locations-join a span {
+    font-size: 1.5VW;
+  }
+
+  .locations__bottom {
+    grid-template-columns: 1fr 1fr 14vw;
+  }
+
+  .locations-descriptions {
+    margin-left: 2vw;
+  }
+
+  .locations__description {
+    font-size: 1.3vw;
+  }
+
+  .locations-descriptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .part-services__title,
+  .part-it-company__title {
+    font-size: 4.8vw;
+  }
+
+  .part-it-company__top-title {
+    font-size: 3vw;
+  }
+
+  .arrow-icon--large svg {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  .input__field {
+    padding: 1vw;
+  }
+
+  main {
+    padding: 130px 0 30px;
+    margin-top: 2.865vw;
+  }
+
+  .place__title {
+    font-size: 4vw;
+  }
+
+  .place__address div {
+    display: flex;
+    align-items: center;
+  }
+
+  .place__address svg {
+    margin-right: 20px;
+  }
+
+  .place-schedule__time span, .around-the-clock {
+    font-size: 1.8vw;
+  }
+
+  .place-info {
+    padding: 2vw 1.5vw;
+    font-size: 1.8vw;
+    display: flex;
+    align-items: center;
+  }
+
+  .it-company h2 {
+    width: 70%;
+  }
+
+  .project-service__title {
+    margin-top: 50px;
+  }
+
+  .project-wrapper {
+    margin-bottom: 8.5vw;
+    margin-top: 2vw;
+  }
+
+  .site-service__title {
+    font-size: 1.5vw;
+  }
+
+  .operate-service {
+    margin-bottom: 4vw;
+  }
+
+  .operate-service__title {
+    font-size: 2vw;
+  }
+
+  .operate-service__description {
+    width: 85%;
+    font-size: 1.3vw;
+  }
+
+  .operate-service img {
+    width: 4vw;
+  }
+
+  .project-item__title {
+    font-weight: 400;
+  }
+
+  .it-info__subtitle {
+    font-size: 1.3vw
+  }
+
+  .it-box {
+    padding: 24px 30px;
+    height: 12vw;
+  }
+
+  .it-box__title {
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+
+  .projects-text-wrapper {
+    margin-bottom: 3.5vw;
+  }
+
+  .features-pagev__wrapper {
+    margin-bottom: 3vw;
+  }
+
+  .finding__title {
+    font-size: 4vw;
+  }
+
+  .finding__description {
+    max-width: 50vw;
+    margin-top: 10px;
+  }
+
+  .place .finding-room__wrapper {
+    height: 35vw;
+  }
+
+  .place-schedule {
+    padding: 1.5vw;
+  }
+
+  .place-schedule__title {
+    font-size: 1.8vw;
+    margin-bottom: 1.8vw;
+  }
+
+  .place-schedule__title svg {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  .place-schedule__time {
+    display: flex;
+  }
+
+  .place-schedule__time:last-child {
+    margin-top: 1vw;
+    display: block;
+
+  }
+
+  .place-schedule__time:last-child span {
+    margin-left: 0;
+  }
+
+  .place-schedule__time span {
+    margin-left: 1vw;
+  }
+
+  .place-booking {
+    padding-left: 1.5vw;
+  }
+
+  .place-booking span {
+    font-size: 1.8vw;
+    line-height: 1.8vw;
+  }
+  .place-info {
+    padding: 1.5vw;
+    min-height: inherit;
+  }
+  .place-info__title {
+    font-size: 1.3vw;
+  }
+
+  .place-info__box.turquoise-color {
+    width: 4vw;
+    height: 4vw;
+  }
+
+  .finding-contact {
+    grid-template-columns: 3fr 3fr 3fr 1.4fr;
+    margin-bottom: 8.5vw;
+  }
+
+  .finding-contact__title {
+    font-size: 1vw;
+  }
+
+  .place-buttons-wrapper .place__button {
+    font-size: 1.7vw;
+    line-height: 2.5vw;
+  }
+
+  .slider-place__description {
+    font-size: 1vw;
+  }
+
+  .capacity__title,
+  .place-price__title {
+    font-weight: 500;
+  }
+
+  .select-room__link span {
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+  }
+
+  .finding-box-contact__title {
+    font-size: 1.5vw;
+  }
+
+  .finding-box-contact {
+    padding: 20px;
+    min-height: 7vw;
+  }
+
+  .place-arrows-wrapper {
+    width: 9vw;
+  }
+
+  .order-block__title {
+    font-size: 1.5vw;
+  }
+
+  .order-block__name,
+  .order-block__price,
+  .order-block__vib {
+    font-size: 1.8vw;
+  }
+
+  .book-now__places-empty {
+    font-size: 1.45vw;
+    margin: 8vw 7vw;
+  }
+
+  .book-now__list {
+    margin-bottom: 50px;
+  }
+
+  .book-now__item-description,
+  .book-now__item-address,
+  .book-now__item-date {
+    font-size: 1.2vw;
+  }
+
+  .book-now__item-name,
+  .book-now__item-price {
+    font-size: 2vw;
+  }
+
+  .book-now__item-info {
+    padding: 1.5vw;
+  }
+
+  .book-now__item-name,
+  .book-now__item-price {
+    margin: 0 0 8px;
+  }
+
+  .order-block__card {
+    padding: 32px 0 25px 0;
+  }
+
+  .order-block__price {
+    margin-top: 25px;
+  }
+
+  .order-block__image {
+    height: 334px;
+  }
+
+  .book-now__checkout{
+    margin-bottom: 5vw;
+  }
+  .book-now__card-text{
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .book-now__finish-download{
+    font-size: 1.3vw;
+    a{
+      margin-left: 20px;
+    }
+  }
+  .book-now__finish-info-name{
+    font-size: 1.3vw;
+  }
+
+  .book-now__finish-info{
+    row-gap: 75px;
+  }
+  .book-now__finish-download {
+    margin: 70px 0;
+  }
+  .locations__title {
+    max-width: 800px;
+  }
+  .locations-join a svg {
+    right: 1.5vw;
+    bottom: 1.5vw;
+}
+.book-now__places-result{
+  font-size: 1.25vw;
+}
+.book-now__item{
+  border: 1px solid #ECECEC;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 29px #f0f0f0;
+}
+
+
+
+
+
+
+
+}

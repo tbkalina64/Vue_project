@@ -1,0 +1,191 @@
+@import "../libs/variables.scss";
+
+.types_room {
+  position: relative;
+
+  .section_line {
+    margin-top: 8.333vw;
+  }
+
+  &__text {
+    font-size: 1.45vw;
+    line-height: 2vw;
+    margin: 0 1.302vw 2.604vw 0;
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 33.8vw;
+    background-image: url("~@/assets/image/slots/4.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // svg {
+    //   width: 2.4vw;
+    //   height: 2.4vw;
+    // }
+  }
+
+
+  &__title {
+    width: 101vw;
+    margin-left: -7vw;
+    margin-bottom: 85px;
+
+    h2 {
+      font-weight: 500;
+      margin: 0;
+      text-transform: uppercase;
+      white-space: nowrap;
+      animation: marquee 20s linear infinite;
+      font-size: 6vw;
+    }
+
+    z-index: 10;
+  }
+
+  &__join {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: $white;
+    background-color: $darkBlue;
+    padding: 30px;
+    width: 11.5vw;
+    height: 8.3vw;
+    text-transform: uppercase;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    margin: 0;
+
+    svg {
+      position: absolute;
+      right: 25px;
+      bottom: 25px;
+
+    }
+
+    span {
+      font-size: 1.875vw;
+    }
+  }
+
+  &__types {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+
+    svg {
+      position: absolute;
+      right: 25px;
+      bottom: 25px;
+    }
+  }
+
+  &__type {
+    h3 {
+      font-weight: 400;
+    }
+
+    height: 14.3vw;
+    padding: 30px;
+    transition: width 0.3s ease-out, max-width 0.3s ease-out;
+    max-width: 20vw;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &--selected {
+      max-width: 25vw;
+      width: 25vw;
+      border-color: #000000;
+
+      .types_room__type_name {
+        opacity: 0;
+      }
+
+      .types_room__type_name--hiden,
+      .types_room__type_description,
+      .types_room__type_price {
+        display: block;
+      }
+
+      .types_room__type_price {
+        display: flex;
+      }
+    }
+
+    &_name {
+      font-size: 2vw;
+      text-transform: uppercase;
+      margin: 0;
+      text-align: center;
+      max-width: 200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &--hiden {
+        display: none;
+        font-size: 1.2em;
+      }
+    }
+
+    &_description,
+    &_price {
+      margin: 0;
+      font-size: 1.7vw;
+      text-transform: uppercase;
+      display: none;
+      justify-content: space-between;
+    }
+
+    &_description {
+      margin: 1.250vw 0 1.823vw;
+      width: 26vw;
+    }
+
+  }
+
+  .section &__type:hover {
+    max-width: 28.5vw;
+    width: 28.5vw;
+
+    .types_room__type_name {
+      opacity: 0;
+    }
+
+    .types_room__type_name--hiden,
+    .types_room__type_description,
+    .types_room__type_price {
+      display: block;
+    }
+
+    .types_room__type_price {
+      display: flex;
+    }
+  }
+}
+
+.types_room__type_description{
+  height: 6.6vw;
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translate(0%, 0);
+  }
+  100% {
+    transform: translate(-141.5vw, 0);
+  }
+}

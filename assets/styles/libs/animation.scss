@@ -1,0 +1,93 @@
+.animation {
+    &__arrow {
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+        svg {
+            transition:  all 0.3s ease-in-out;
+          fill: #fff
+        }
+
+        a {
+            pointer-events: none;
+        }
+
+        &:hover {
+            svg {
+                animation-duration: 0.5s;
+                animation-name: changeScale;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: ease-out;
+                pointer-events: none;
+              path{
+                fill: #000126;
+              }
+            }
+          background-color: #92E6E6;
+          color: #000126;
+        }
+
+        &--title {
+            padding: 2vw 1.5vw;
+            display: block;
+        }
+    }
+
+    &__cursor {
+        position: absolute;
+        width: 100px;
+        height: 80px;
+        text-transform: uppercase;
+        font-size: 24px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(100, 100, 100, 0.6);
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        &--show {
+            opacity: 1;
+        }
+    }
+    
+}
+.animation__arrow-link .animated-link{
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.animation__arrow-link:hover .animated-link {
+      svg {
+          animation-duration: 0.5s;
+          animation-name: changeScale;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          animation-timing-function: ease-out;
+          pointer-events: none;
+        path{
+          fill: #000126;
+        }
+      }
+    background-color: #92E6E6;
+    color: #000126;
+  
+}
+
+@keyframes changeScale {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+}

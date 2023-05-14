@@ -1,0 +1,125 @@
+@import '../libs/variables.scss';
+
+.services {
+  padding-top: 90px;
+  height: calc(100vh - 90px);
+}
+
+.main-services {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.part-services {
+
+  a>div {
+    padding-top: 10vw;
+  }
+
+  a {
+    background-image: url('~@/assets/image/services-bg.webp');
+    background-size: cover;
+    color: $white;
+    display: grid;
+    justify-items: center;
+    -webkit-justify-items: center;
+    -webkit-display: grid;
+    -webkit-justify-content: center;
+    -webkit-justify-self: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+
+    &:hover {
+      color: #000126;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.66) 0%, rgba(255, 255, 255, 0.472594) 49.26%, rgba(255, 255, 255, 0) 100%), url(~@/assets/image/services-bg.webp);
+      background-size: cover;
+
+      .part-services__img svg path {
+        fill: #000126;
+      }
+
+    }
+  }
+
+  &__title {
+    font-size: 4.8vw;
+    text-transform: uppercase;
+    margin: 0;
+    max-width: min-content;
+  }
+
+  &__block-text {
+    width: min-content;
+  }
+
+  &__text {
+    font-size: 1.250vw;
+    line-height: 1.5;
+    margin: 35px 0 50px;
+    max-width: 24.5vw;
+
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 70px;
+    left: 65px;
+
+  }
+}
+
+.part-it-company {
+
+  a {
+    background-color: #92E6E6;
+    background-image: url('~@/assets/image/services-right-bg.png');
+    justify-items: center;
+    display: grid;
+    position: relative;
+    background-size: cover;
+    height: 100%;
+    transition: all .5s;
+
+    &:hover {
+      color: $white;
+      background-color: #000126;
+
+      .part-it-company__img svg path {
+        fill: $white;
+      }
+    }
+  }
+
+  a>div {
+    padding-top: 10vw;
+  }
+
+  &__title {
+    font-size: 4.8vw;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__top-title {
+    font-size: 3vw;
+    width: 400px;
+    text-transform: uppercase;
+  }
+
+
+  &__text {
+    font-size: 1.250vw;
+    line-height: 1.5;
+    margin: 35px 0 50px;
+    width: 20.8vw;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 70px;
+    right: 65px;
+  }
+}

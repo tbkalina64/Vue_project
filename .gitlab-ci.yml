@@ -1,0 +1,88 @@
+image: docker
+
+variables:
+  ENV_sample: '.env-sample'
+  ENV_FILE: '.env'
+
+stages:
+  - dev
+  - stage
+  - master
+
+dev:
+  stage: dev
+  image: composer:1.6
+  environment:
+    name: dev/$CI_PIPELINE_IID
+  before_script:
+    - mkdir -p cache
+    - ln -s $PWD/cache /etc/apk/cache
+    - apk add rsync
+    - for i in $(compgen -v | grep dev_); do eval $(echo $(echo $i | sed 's/dev_//')=${!i}) ; done
+    - mkdir ~/.ssh
+    - echo "${DEV_SSH_FINGERPRINT}" > ~/.ssh/known_hosts
+    - eval $(ssh-agent -s)
+    - echo "$DEV_SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  script:
+#    - eval "echo \"$(cat $ENV_sample)\"" > $ENV_FILE
+    - rsync -r -a -v -e "ssh -p $DEV_SSH_PORT" --exclude-from .rsync_exclude --delete ./ $DEV_SSH_LOGIN@$DEV_SSH_IP:~/newwww/
+    - ssh -p $DEV_SSH_PORT -l $DEV_SSH_LOGIN $DEV_SSH_IP "cd /home/$DEV_SSH_LOGIN/newwww/ && npm install && npm run build && pm2 kill && pm2 start && pm2 ls"
+  cache:
+    key: $CI_COMMIT_REF_SLUG
+  tags:
+    - executor-docker
+  only:
+    - dev
+  when: manual
+
+stage:
+  stage: stage
+  image: composer:1.6
+  environment:
+    name: stage/$CI_PIPELINE_IID
+  before_script:
+    - mkdir -p cache
+    - ln -s $PWD/cache /etc/apk/cache
+    - apk add rsync
+    - for i in $(compgen -v | grep stage_); do eval $(echo $(echo $i | sed 's/stage_//')=${!i}) ; done
+    - mkdir ~/.ssh
+    - echo "${STAGE_SSH_FINGERPRINT}" > ~/.ssh/known_hosts
+    - eval $(ssh-agent -s)
+    - echo "$STAGE_SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  script:
+    - eval "echo \"$(cat $ENV_sample)\"" > $ENV_FILE
+    - rsync -r -a -v -e "ssh -p $STAGE_SSH_PORT" --exclude-from .rsync_exclude --delete ./ $STAGE_SSH_LOGIN@$STAGE_SSH_IP:~/www/
+    - ssh -p $STAGE_SSH_PORT -l $STAGE_SSH_LOGIN $STAGE_SSH_IP "cd /home/$STAGE_SSH_LOGIN/www/ && npm install && npm run build && pm2 kill && pm2 start && pm2 ls"
+  cache:
+    key: $CI_COMMIT_REF_SLUG
+  tags:
+    - executor-docker
+  only:
+    - stage
+  when: manual
+
+master:
+  stage: master
+  image: composer:1.6
+  environment:
+    name: master/$CI_PIPELINE_IID
+  before_script:
+    - mkdir -p cache
+    - ln -s $PWD/cache /etc/apk/cache
+    - apk add rsync
+    - for i in $(compgen -v | grep master_); do eval $(echo $(echo $i | sed 's/master_//')=${!i}) ; done
+    - mkdir ~/.ssh
+    - echo "${MASTER_SSH_FINGERPRINT}" > ~/.ssh/known_hosts
+    - eval $(ssh-agent -s)
+    - echo "$MASTER_SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  script:
+    - eval "echo \"$(cat $ENV_sample)\"" > $ENV_FILE
+    - rsync -r -a -v -e "ssh -p $MASTER_SSH_PORT" --exclude-from .rsync_exclude --delete ./ $MASTER_SSH_LOGIN@$MASTER_SSH_IP:~/www/
+    - ssh -p $MASTER_SSH_PORT -l $MASTER_SSH_LOGIN $MASTER_SSH_IP "cd /home/$MASTER_SSH_LOGIN/www/ && npm install && npm run build && pm2 kill && pm2 start && pm2 ls"
+  cache:
+    key: $CI_COMMIT_REF_SLUG
+  tags:
+    - executor-docker
+  only:
+    - master
+  when: manual

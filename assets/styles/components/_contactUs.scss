@@ -1,0 +1,79 @@
+@import '../libs/variables.scss';
+
+.contact-us {
+    &__block-link {
+        margin-bottom: 3.6vw;
+        margin-left: 6vw;
+        p {
+            font-size: 1.458vw;
+            letter-spacing: 0.035em;
+            color: #717171;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        a {
+            font-size: 1.250vw;
+            text-transform: uppercase;
+            color: $black;
+            max-width: 300px;
+            display: block;
+        }
+    }
+  &__wrapper{
+    .features__text{
+      margin-bottom: 2vw;
+    }
+  }
+    &__form {
+        display: grid;
+        grid-gap: 2.2vw;
+        margin-top: 22px;
+
+        &-block {
+            display: grid;
+            grid-gap: 2.64vw;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+        }
+
+        &-button {
+            background-color: $darkBlue;
+            padding: 1.5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            transition: all 0.3s;
+            font-family: "Roboto", sans-serif;
+
+            svg path{
+              fill: $white;
+             }
+
+            &:hover {
+                background-color: $turquoise;
+              span{
+                color: $darkBlue;
+              }
+              svg path{
+                fill: $darkBlue;
+              }
+            }
+
+            span {
+                font-size: 1.5vw;
+                text-transform: uppercase;
+                color: $white;
+            }
+        }
+    }
+  .form-group{
+    position: relative;
+    display: flex;
+  }
+}
+.ant-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+}

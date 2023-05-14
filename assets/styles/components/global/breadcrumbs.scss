@@ -1,0 +1,22 @@
+.breadcrumbs {
+    position: absolute;
+    top: 100px;
+    margin-top: 13px;
+    z-index: 1;
+
+    .nuxt-link-active {
+        color: #3396CD;
+    }
+
+    .nuxt-link-exact-active.nuxt-link-active {
+        color: #C4C4C4;
+    }
+    a {
+        color:#C4C4C4;
+    }
+}
+
+
+.breadcrumbs li:last-child{
+  pointer-events: none;
+}

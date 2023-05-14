@@ -1,0 +1,130 @@
+.input {
+    input {
+        font-size: 1.250vw;
+    }
+
+    margin-top: 1.667vw;
+    position: relative;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &__field {
+        -webkit-appearance: none;
+        width: 100%;
+        background: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+        padding: 1vw;
+        outline: none;
+    }
+
+    &__label {
+        font-size: 1.250vw;
+        line-height: 1.250vw;
+        color: #000126;
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+        pointer-events: none;
+        border-radius: 10px;
+
+        &--active {
+            top: 0 !important;
+            background-color: #ffffff;
+            width: max-content;
+            padding: 0 5px!important;
+            font-size: 16px!important;
+        }
+
+        &--error {
+            color: #f5222d;
+        }
+    }
+
+    &__field:focus + .input__label {
+        top: 0;
+        background-color: #ffffff;
+        width: max-content;
+        padding: 0 5px;
+        font-size: 16px;
+    }
+
+    &__error {
+        font-family: 'Roboto', san-serif;
+        font-size: 13px;
+        color: #f5222d;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        z-index: 1;
+    }
+    &.select-phone-code{
+      display: flex;
+      flex-direction: row-reverse;
+
+       .input__label {
+        left: 94px;
+    }
+
+    .ant-select-selection.ant-select-selection--single {
+      border-color: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.3);;
+      border-right: none;
+    }
+
+    }
+}
+
+.ant-select-selection.ant-select-selection--single {
+  height: 100%;
+}
+.ant-select-selection__rendered{
+  font-size: 1.25vw;
+}
+.ant-select-selection.ant-select-selection--single{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grecaptcha-badge{
+  z-index: 10;
+}
+
+
+
+@media (max-width: 576px) {
+    .input__label {
+        font-size: 16px;
+    }
+}
+
+button:disabled,
+button[disabled]{
+  background-color: $lightGray;
+  border: 1px solid transparent;
+  span{
+    color: #CACACA;
+  }
+  svg path{
+    fill:  #CACACA;
+  }
+}
+button:disabled:hover,
+button[disabled]:hover{
+  cursor: not-allowed;
+  border: 1px solid $silverGray;
+  background-color: $lightGray;
+  color: #CACACA;
+  span{
+    color: #CACACA;
+  }
+  svg path{
+    fill:  #CACACA;
+  }
+}
+

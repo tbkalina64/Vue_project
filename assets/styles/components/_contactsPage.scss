@@ -1,0 +1,165 @@
+@import '../libs/variables.scss';
+
+.contacts-page {
+  &__text {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin-bottom: 3vw;
+  }
+
+  &__title {
+    font-size: 4vw;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  #map {
+    height: 100%;
+    .vue-map-container {
+      height: 100%;
+
+      .vue-map div {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    iframe{
+      height: 100%;
+    }
+  }
+}
+.vue-map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.icon__times{
+  path:first-child{
+    fill: #C1BFBF
+  }
+  path:last-child{
+    stroke: #C1BFBF
+  }
+  circle{
+    stroke: #C1BFBF
+  }
+}
+
+.ant-checkbox-wrapper .book-now__card-text{
+margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  .map > div{
+    height: 100%;
+  }
+}
+
+.vue-map-container{
+  height: 100%;
+  width: 100%;
+}
+.animation__block {
+  background-color: #000126;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  position: relative;
+}
+
+.animation__block:hover {
+  background-color: #92E6E6;
+  color: #000126;
+
+  svg path {
+    fill: #000126;
+  }
+  .icon__times{
+    path:first-child{
+      fill: #000126
+    }
+    path:last-child{
+      stroke: #000126
+    }
+    circle{
+      stroke: #000126
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons-container {
+  display: grid;
+  width: 100%;
+}
+
+.contacts-page__button {
+  flex-direction: column;
+  height: auto;
+  align-items: baseline;
+  padding: 2vw;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
+
+.contacts-page-title {
+  display: flex;
+  font-size: 1.875vw;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.button-VIB {
+  font-size: 1.875vw;
+  position: relative;
+  top: -7px;
+  text-transform: uppercase;
+}
+
+.contacts-page__button:first-child .button-VIB {
+  top: 0;
+}
+
+.button-name {
+  max-width: 350px;
+
+  &__divider {
+    margin-right: 7px;
+    margin-left: 10px;
+  }
+}
+
+
+.button__address {
+  display: flex;
+  margin-bottom: 20px;
+
+  .icon__location~div {
+    margin-left: 10px;
+  }
+}
+
+.location-link svg {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+}
+
+.button__working-hours {
+  display: flex;
+  align-content: flex-start;
+  font-size: 1.2vw;
+
+  &__value {
+    margin-left: 11px;
+  }
+
+}
+
+.button__working-hours__value div span:last-child {
+  margin-left: 10px;
+}

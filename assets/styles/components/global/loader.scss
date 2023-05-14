@@ -1,0 +1,30 @@
+@import '../../libs/variables.scss';
+
+.loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    z-index: 11;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .logo {
+        width: 40vw;
+        display: flex;
+        justify-content: center;
+
+        &__text {
+            width: 50%;
+        }
+
+        svg {
+            width: 30%;
+            height: auto;
+        }
+    }
+}

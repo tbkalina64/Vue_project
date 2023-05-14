@@ -1,0 +1,60 @@
+@import "./libs/index.scss";
+@import "./components/index.scss";
+@import "./pages/index.scss";
+@import "media";
+@import "media1200";
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.height-100 {
+    height: 100%;
+}
+.app {
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 500;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+main {
+    padding: 130px 0 30px;
+    margin-top: 2.865vw;
+}
+
+.relative{
+  position: relative;
+}
+
+.noContainerLayout {
+    .breadcrumbs {
+        .nuxt-link-exact-active {
+            color: $white;
+        }
+        .nuxt-link-exact-active {
+            color: #C4C4C4;
+        }
+    }
+}

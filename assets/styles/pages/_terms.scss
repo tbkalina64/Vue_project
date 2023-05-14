@@ -1,0 +1,10 @@
+.terms {
+    &__link {
+        color: #007aff;
+        text-decoration: underline;
+    }
+    &__list {
+        list-style: disc;
+        padding-left: 20px;
+    }
+}

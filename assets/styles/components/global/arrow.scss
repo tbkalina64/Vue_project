@@ -1,0 +1,49 @@
+@import '../../libs/variables.scss';
+
+.arrow-icon svg {
+  width: 34px;
+  height: 35px;
+}
+
+.arrow-icon--large svg {
+  width: 4vw;
+  height: 4vw;
+}
+
+.types_room__types svg path {
+  fill: #000126;
+}
+
+@media (max-width: 1199px) {
+  .arrow-icon .arrow-left {
+    transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .arrow-icon svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .arrow-icon--large svg {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+@media (max-width: 768px) {
+  .arrow-icon--large svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .arrow-icon svg,
+  .arrow-icon--large svg {
+    width: 36px;
+    height: 36px;
+  }
+}

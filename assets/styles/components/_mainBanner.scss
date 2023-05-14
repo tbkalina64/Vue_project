@@ -1,0 +1,102 @@
+@import '../libs/variables.scss';
+
+
+//
+//.scroll-horizontal{
+//  overflow-x:scroll;
+//  overflow-y:hidden;
+//}
+
+.main_banner {
+    &__photo {
+        margin-top: 3.646vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 41.66vw;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__text {
+        text-transform: uppercase;
+        margin: 0;
+        height: 16vw;
+        padding-bottom: 0;
+    }
+
+    &__title {
+        font-size: 2.5vw;
+        line-height: 2.5vw;
+        padding: 3.125vw 2vw 0;
+        background-color: $beige;
+        max-width: 25.26vw;
+        pre{
+          font-size: 6vw;
+        }
+
+    }
+  .logo{
+    svg{
+      width: 21.875vw;
+    }
+    &__text{
+      margin-left: 45px;
+    }
+  }
+
+    &__sub_title {
+        position: relative;
+        max-width: 13.021vw;
+        padding: 3.125vw 4.167vw 0 3.125vw;
+        font-size: 1.875vw;
+
+        background-color: $darkBlue;
+        color: $white;
+
+        svg {
+            position: absolute;
+            right: 2vw;
+            bottom: 2vw;
+        }
+    }
+}
+
+.banner__arrow{
+  width: 5.208vw;
+  height: 4.948vw;
+}
+
+.main_banner__photo-phone{
+  max-width: 100%;
+  height: auto;
+}
+
+.main_banner__arrow{
+  width: 2.344vw;
+  height: 2.344vw;
+}
+
+.it-company {
+  .main_banner__title {
+    background-color: $turquoise;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+
+    div:first-child {
+      max-width: 10.417vw;
+    }
+
+    div:last-child {
+      padding-bottom: 2vw;
+    }
+  }
+    .main_banner__sub_title{
+      span{
+        max-width: 10.417vw;
+        display: block;
+      }
+    }
+}

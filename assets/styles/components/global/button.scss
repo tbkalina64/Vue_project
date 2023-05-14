@@ -1,0 +1,39 @@
+@import '../../libs/variables.scss';
+
+.button {
+    padding: 16px 2vw;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    font-size: 20px;
+    height: max-content;
+    white-space: nowrap;
+    
+    font-family: "Roboto", sans-serif;
+
+    &.black {
+        color: $white;
+        background-color: $darkBlue;
+
+        &:hover {
+            color: $darkBlue;
+            background-color: $turquoise;
+        }
+    }
+
+    &.white {
+        color: $darkBlue;
+        border: 1px solid $darkBlue;
+        background-color: $white;
+
+        &:hover {
+            color: $white;
+            background-color: $darkBlue;
+        }
+    }
+
+    &:active {
+        color: $white;
+        background-color: $perpule;
+    }
+}
